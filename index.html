@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+    <style>
+        /* Basic Reset and Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1db954, #191414); /* Spotify-esque colors */
+            color: white;
+        }
+
+        .player-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 { margin-bottom: 5px; }
+        p { margin-top: 0; opacity: 0.8; font-size: 0.9rem; }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Makes the default player pop on dark backgrounds */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player-container">
+        <h2>Now Playing</h2>
+        <p id="song-title">Your Favorite Song</p>
+        
+        <audio controls>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+</body>
+</html>
